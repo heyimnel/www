@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ import "../styles/global.css";
     </head>
     <body>
         <slot />
+        <SpeedInsights />
     </body>
 </html>
 
