@@ -1,5 +1,7 @@
 ---
 import Social from "./Social.astro";
+import Backicon from "../assets/icons/Backicon.svg";
+import BackIcon from "../assets/icons/BackIconLeft.svg";
 
 const currentPath = Astro.url.pathname;
 const isHomePage = currentPath === "/" || currentPath === "";
@@ -13,24 +15,10 @@ const isHomePage = currentPath === "/" || currentPath === "";
             !isHomePage && (
                 <a
                     href="javascript:history.back()"
-                    class="inline-flex items-center select-none hover:text-white transition-colors duration-300 text-gray-200 mr-2"
+                    class="inline-flex items-center select-none hover:text-white transition-colors duration-300 text-gray-200 ml-5 mb-0.5"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="mr-1"
-                    >
-                        <path d="M19 12H5" />
-                        <path d="M12 19l-7-7 7-7" />
-                    </svg>
-                    Back
+                    <BackIcon class="mr-1 mt-0.5 text-white w-4.5 h-4.5" />
+                    <p class="font-inter text-base">Back</p>
                 </a>
             )
         }
@@ -38,9 +26,11 @@ const isHomePage = currentPath === "/" || currentPath === "";
         <Social platform="github" username="heyimnel" />
         <a
             href="mailto:heyimnel@proton.me"
-            class="inline-flex items-center select-none hover:text-white transition-colors duration-300 text-gray-200"
+            draggable="false"
+            class="inline-flex items-center select-none hover:text-gray-300/80 transition-colors duration-300 text-gray-200"
         >
-            Contact me <svg
+            <p draggable="false" class="text-current">Contact Me</p>
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
                 class="ml-1.5 mt-0.5 w-5 h-5"
