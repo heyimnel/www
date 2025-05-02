@@ -1,0 +1,19 @@
+---
+const { platform, username } = Astro.props;
+
+function generateUrl(platform: string, username: string): string {
+    if (platform.toLowerCase() === "linkedin") {
+        return `https://www.linkedin.com/in/${username}`;
+    } else {
+        return `https://www.${platform.toLowerCase()}.com/${username}`;
+    }
+}
+
+const url = generateUrl(platform, username);
+---
+
+<a
+    href={url}
+    class="select-none px-3 py-1.5 text-gray-300 bg-gray-800/25 hover:bg-gray-700/70 rounded-md transition-colors duration-300"
+    >{platform}</a
+>
