@@ -1,13 +1,143 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <Welcome />
+    <!-- Here i used Tailwind, "bg-black" makes the element black, min-h-screen makes the element at least as tall as viewport, and w-full makes the element take all the width it can, text-white makes text white-->
+    <div class="bg-black min-h-screen w-full" id="container">
+        <p
+            class="select-none text-gray-200 absolute left-1/2 transform -translate-x-1/2 top-20.5 text-2xl font-inter"
+        >
+            hi, I'm nel. i like coding and stuff, like i love my fiancée. <br />
+        </p>
+        <p
+            class="text-gray-200 select-none absolute left-1/2 transform -translate-x-1/2 top-28 text-2xl font-inter"
+        >
+            you're here probably for one of these:
+        </p>
+        <!--  -->
+        <p
+            class="text-gray-200 select-none absolute left-1/2 transform -translate-x-1/2 top-46 text-xs font-inter"
+        >
+            btw this site is a work-in-progress
+        </p>
+        <p
+            class="text-gray-200 select-none absolute left-1/2 transform -translate-x-1/2 top-50 text-xs font-inter"
+        >
+            but hi if you're here, have a nice day
+        </p>
+        <!--  -->
+        <div
+            class="absolute left-1/2 transform -translate-x-1/2 top-60"
+            id="rectangles-container"
+        >
+            <a href="/projects/" class="block">
+                <div
+                    class="group rounded-xl border border-white/10 w-120 h-20 mb-16 flex items-center justify-center overflow-hidden relative cursor-pointer"
+                    id="rectangle1"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-gray-800/10 to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    >
+                    </div>
+                    <p
+                        class="select-none text-gray-200 text-lg relative z-10 group-hover:scale-105 transition-transform duration-300 mb-1"
+                    >
+                        My Projects
+                    </p>
+                    <p
+                        class="select-none text-white/60 text-sm absolute top-12"
+                    >
+                        i created some things, like a different website
+                    </p>
+                </div>
+            </a>
+            <a href="/about/" class="block">
+                <div
+                    class="group rounded-xl border border-white/10 w-120 h-20 mb-16 flex items-center justify-center overflow-hidden relative cursor-pointer"
+                    id="rectangle2"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-gray-800/10 to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    >
+                    </div>
+                    <p
+                        class="select-none text-gray-200 text-lg relative z-10 group-hover:scale-105 transition-transform duration-300 mb-1"
+                    >
+                        About Me
+                    </p>
+                    <p
+                        class="select-none text-white/60 text-sm absolute top-12"
+                    >
+                        learn more about who i am
+                    </p>
+                </div>
+            </a>
+            <a href="/blog/" class="block">
+                <div
+                    class="rounded-xl border border-white/10 w-120 h-20 mb-16 group flex items-center justify-center overflow-hidden relative cursor-pointer"
+                    id="rectangle3"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-gray-800/10 to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    >
+                    </div>
+                    <p
+                        class="select-none text-gray-200 text-lg relative z-10 group-hover:scale-105 transition-transform duration-300 mb-1"
+                    >
+                        Blog
+                    </p>
+                    <p
+                        class="select-none text-white/60 text-sm absolute top-12"
+                    >
+                        my thoughts and experiences
+                    </p>
+                </div>
+            </a>
+            <a href="/experience/" class="block">
+                <div
+                    class="rounded-xl border w-120 h-20 border-white/10 mb-16 group flex items-center justify-center overflow-hidden relative cursor-pointer"
+                    id="rectangle4"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-gray-800/10 to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    >
+                    </div>
+                    <p
+                        class="select-none text-gray-200 text-lg relative z-10 group-hover:scale-105 transition-transform duration-300 mb-1"
+                    >
+                        My Resume / CV
+                    </p>
+                    <p
+                        class="select-none text-white/60 text-sm absolute top-12"
+                    >
+                        my professional experience and skills
+                    </p>
+                </div>
+            </a>
+            <a href="/opensource/" class="block">
+                <div
+                    class="rounded-xl border w-120 h-20 border-white/10 mb-16 group flex items-center justify-center overflow-hidden relative cursor-pointer"
+                    id="rectangle5"
+                >
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-gray-800/10 to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    >
+                    </div>
+                    <p
+                        class="select-none text-gray-200 text-lg relative z-10 group-hover:scale-105 transition-transform duration-300 mb-1"
+                    >
+                        Open Source
+                    </p>
+                    <p
+                        class="select-none text-white/60 text-sm absolute top-12"
+                    >
+                        cool open source stuff that deserves recognition
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
     <Footer />
 </Layout>
