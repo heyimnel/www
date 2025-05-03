@@ -1,9 +1,336 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-    <div class="bg-black min-h-screen w-full" id="container"></div>
-    <Footer />
+<Layout isFooterFixed={false}>
+    <div class="bg-black min-h-screen w-full" id="container">
+        <h1
+            class="select-none text-gray-200 absolute left-1/2 transform -translate-x-1/2 top-20 text-3xl font-inter"
+            draggable="false"
+        >
+            Open Source Wall of Fame
+        </h1>
+        <div class="max-w-5xl mx-auto pt-36 px-6 pb-20">
+            <p class="text-gray-300 text-center mb-8">
+                Here are some amazing open-source programs that deserve
+                recognition for their contributions to the tech and creative
+                communities.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Godot -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Godot</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A powerful and lightweight game engine for 2D and 3D
+                        games. Loved by indie developers for its flexibility and
+                        ease of use.
+                    </p>
+                    <a
+                        href="https://godotengine.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Linux -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Linux</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        The open-source operating system that powers servers,
+                        desktops, and devices worldwide. A cornerstone of the
+                        open-source movement.
+                    </p>
+                    <a
+                        href="https://www.linux.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Signal -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Signal</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A secure messaging app that prioritizes privacy and
+                        encryption. Open-source and trusted by millions
+                        worldwide.
+                    </p>
+                    <a
+                        href="https://signal.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Krita -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Krita</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A professional-grade digital painting program for
+                        artists. Perfect for concept art, illustrations, and
+                        comics.
+                    </p>
+                    <a
+                        href="https://krita.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Zed -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Zed</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A collaborative code editor designed for speed and
+                        simplicity. Built for developers who value productivity.
+                    </p>
+                    <a
+                        href="https://zed.dev/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Aseprite -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Aseprite</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A pixel art tool for creating animations and sprites.
+                        Loved by game developers and pixel artists alike.
+                    </p>
+                    <a
+                        href="https://www.aseprite.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Proton (Gaming) -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Proton</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A compatibility layer for running Windows games on
+                        Linux. Developed by Valve and powered by Wine.
+                    </p>
+                    <a
+                        href="https://www.protondb.com/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Proton (Privacy Tools) -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">
+                        Proton (Privacy Tools)
+                    </h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        The team behind Proton Mail, Proton VPN, and other
+                        privacy-focused tools. Empowering users to take control
+                        of their data.
+                    </p>
+                    <a
+                        href="https://proton.me/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Bitwarden -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Bitwarden</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A secure and open-source password manager that helps you
+                        store and manage your passwords safely across devices.
+                    </p>
+                    <a
+                        href="https://bitwarden.com/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Blender -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Blender</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A powerful open-source 3D creation suite for modeling,
+                        animation, rendering, and more.
+                    </p>
+                    <a
+                        href="https://www.blender.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- GIMP -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">GIMP</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A versatile open-source image editor for photo
+                        retouching, image composition, and graphic design.
+                    </p>
+                    <a
+                        href="https://www.gimp.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Inkscape -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Inkscape</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A professional vector graphics editor for creating
+                        illustrations, logos, and complex designs.
+                    </p>
+                    <a
+                        href="https://inkscape.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+
+                <!-- Zen Firefox -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Zen Firefox</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A privacy-focused fork of Firefox, designed to enhance
+                        browsing speed and security while respecting user
+                    </p>
+                    <a
+                        href="https://zen-browser.app/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+                <!-- OBS Studio -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">OBS Studio</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A free and open-source software for video recording and
+                        live streaming. Widely used by content creators for its
+                        flexibility and powerful features.
+                    </p>
+                    <a
+                        href="https://obsproject.com/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+                <!-- Audacity -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Audacity</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A free and open-source audio editor for recording and
+                        editing sounds. Perfect for podcasters, musicians, and
+                        audio enthusiasts.
+                    </p>
+                    <a
+                        href="https://www.audacityteam.org/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+                <!-- Anytype -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Anytype</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A privacy-focused and open-source note-taking app that
+                        empowers users to organize their thoughts, ideas, and
+                        projects while keeping full control of their data.
+                    </p>
+                    <a
+                        href="https://anytype.io/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+                <!-- Neovim -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Neovim</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A modern and extensible fork of Vim, Neovim builds upon
+                        the legacy of its predecessor while introducing new
+                        features and improved performance. Loved by developers
+                        for its flexibility, speed, and plugin ecosystem.
+                    </p>
+                    <a
+                        href="https://neovim.io/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+                <!-- Organic Maps -->
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Organic Maps</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A privacy-focused and open-source maps app that provides
+                        offline navigation and detailed maps for travelers,
+                        hikers, and cyclists, all without tracking or ads.
+                    </p>
+                    <a
+                        href="https://organicmaps.app/"
+                        target="_blank"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                        >Learn More →</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>

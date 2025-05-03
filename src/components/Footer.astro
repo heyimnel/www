@@ -1,14 +1,16 @@
 ---
 import Social from "./Social.astro";
-import Backicon from "../assets/icons/Backicon.svg";
 import BackIcon from "../assets/icons/BackIconLeft.svg";
 
+const { isFixed = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 const isHomePage = currentPath === "/" || currentPath === "";
 ---
 
 <footer
-    class="w-full text-center py-6 text-white/70 border-t border-white/10 absolute bottom-0 left-0"
+    class={`w-full text-center py-6 text-white/70 border-t border-white/10 bg-black ${
+        isFixed ? "absolute bottom-0 left-0" : ""
+    }`}
 >
     <div class="flex justify-center items-center gap-4">
         {

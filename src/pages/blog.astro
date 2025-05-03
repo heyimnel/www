@@ -1,9 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-    <div class="bg-black min-h-screen w-full" id="container"></div>
-    <Footer />
+<Layout isFooterFixed={false}>
+    <div class="bg-black min-h-screen w-full" id="container">
+        <!-- <h1
+            class="select-none text-gray-200 absolute left-1/2 transform -translate-x-1/2 top-20 text-3xl font-inter"
+            draggable="false"
+        >
+            Blog
+        </h1>
+        <div class="max-w-5xl mx-auto pt-36 px-6 pb-20">
+            <p class="text-gray-300 text-center mb-8">
+                Welcome to my blog! Here, I share my thoughts, experiences, and
+                insights on coding, technology, and life.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="group rounded-xl border border-white/10 p-6 bg-gray-900/10 hover:bg-gray-800/20 transition-colors"
+                >
+                    <h2 class="text-gray-200 text-xl mb-2">Why I Love Astro</h2>
+                    <p class="text-gray-300 text-sm mb-4">
+                        A deep dive into why Astro is my go-to framework for
+                        building fast, modern websites.
+                    </p>
+                    <a
+                        href="/blog/"
+                        class="text-blue-400 hover:text-blue-300 text-sm"
+                    >
+                        Read More →
+                    </a>
+                </div>
+            </div>
+        </div> -->
+    </div>
 </Layout>
