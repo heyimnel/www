@@ -1,11 +1,6 @@
 # My Personal Website's repo
 This is the repository for my personal website, heyimnel.dev
 
-## Current State
-
-Right now, the site is really simple.
-Consider it a digital placeholder that I'll be expanding over time.
-
 ## Tech Stack
 
 - [Astro](https://astro.build)
