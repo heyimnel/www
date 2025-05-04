@@ -8,19 +8,19 @@ const isHomePage = currentPath === "/" || currentPath === "";
 ---
 
 <footer
-    class={`w-full text-center py-6 text-white/70 border-t border-white/10 bg-black ${
-        isFixed ? "absolute bottom-0 left-0" : ""
+    class={`w-full text-center py-3 md:py-5 text-white/70 border-t border-white/10 bg-black ${
+        isFixed ? "md:fixed md:bottom-0 md:left-0 mt-auto" : "mb-6 md:mt-8"
     }`}
 >
-    <div class="flex justify-center items-center gap-4">
+    <div class="flex flex-wrap justify-center items-center gap-2 md:gap-4">
         {
             !isHomePage && (
                 <a
                     href="javascript:history.back()"
                     class="inline-flex items-center select-none hover:text-white transition-colors duration-300 text-gray-200 ml-5 mb-0.5"
                 >
-                    <BackIcon class="mr-1 mt-0.5 text-white w-4.5 h-4.5" />
-                    <p class="font-inter text-base">Back</p>
+                    <BackIcon class="mr-1 mt-0.5 text-white w-4 h-4 md:w-4.5 md:h-4.5" />
+                    <p class="font-inter text-sm md:text-base">Back</p>
                 </a>
             )
         }
@@ -31,11 +31,13 @@ const isHomePage = currentPath === "/" || currentPath === "";
             draggable="false"
             class="inline-flex items-center select-none hover:text-gray-300/80 transition-colors duration-300 text-gray-200"
         >
-            <p draggable="false" class="text-current">Contact Me</p>
+            <p draggable="false" class="text-current text-sm md:text-base">
+                Contact Me
+            </p>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
-                class="ml-1.5 mt-0.5 w-5 h-5"
+                class="ml-1.5 mt-0.5 w-4 h-4 md:w-5 md:h-5"
                 ><rect width="256" height="256" fill="none"></rect><path
                     d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"
                     fill="none"

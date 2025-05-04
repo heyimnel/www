@@ -8,7 +8,7 @@ const { isFooterFixed = false } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class={isFooterFixed ? "fixed-footer" : "normal-footer"}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -16,14 +16,54 @@ const { isFooterFixed = false } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>hi! I'm Nel</title>
         <script>
+            // Make all elements non-draggable
             document.querySelectorAll("*").forEach((el) => {
                 el.setAttribute("draggable", "false");
             });
+
+            // Only run on pages with fixed footer
+            if (document.documentElement.classList.contains("fixed-footer")) {
+                function handleScroll() {
+                    // Only apply on desktop
+                    if (window.innerWidth < 768) return;
+
+                    const main = document.querySelector("main");
+                    const footer = document.querySelector("footer");
+                    const content = main?.querySelector(":scope > div");
+
+                    if (!main || !footer || !content) return;
+
+                    const contentHeight = content.scrollHeight;
+                    const viewportHeight = window.innerHeight;
+                    const footerHeight = footer.offsetHeight;
+                    const availableSpace = viewportHeight - footerHeight;
+
+                    // Enable scrolling only if content exceeds available space
+                    if (contentHeight > availableSpace - 20) {
+                        document.body.classList.add("enable-scroll");
+                        main.style.overflowY = "auto";
+                        main.style.maxHeight = `calc(100vh - ${footerHeight}px)`;
+                    } else {
+                        document.body.classList.remove("enable-scroll");
+                        main.style.overflowY = "hidden";
+                        main.style.maxHeight = "none";
+                    }
+                }
+
+                // Run on load and resize
+                window.addEventListener("load", () =>
+                    setTimeout(handleScroll, 100),
+                );
+                window.addEventListener("resize", handleScroll);
+            }
         </script>
     </head>
-    <body class="select-none" draggable="false">
-        <div id="container">
-            <main>
+    <body class="select-none bg-black" draggable="false">
+        <div
+            id="container"
+            class={isFooterFixed ? "md:min-h-screen md:flex md:flex-col" : ""}
+        >
+            <main class={isFooterFixed ? "md:flex-grow pb-7 md:pb-14" : ""}>
                 <slot />
             </main>
             <Footer isFixed={isFooterFixed} />
@@ -34,10 +74,46 @@ const { isFooterFixed = false } = Astro.props;
 </html>
 
 <style>
+    /* Base styles */
     html,
     body {
         margin: 0;
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Regular pages always scroll */
+    html.normal-footer,
+    html.normal-footer body {
+        overflow-y: auto !important;
+    }
+
+    @media (min-width: 768px) {
+        /* Fixed footer page styles */
+        html.fixed-footer #container {
+            max-height: 100vh;
+        }
+
+        footer.md\:fixed {
+            z-index: 10;
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hide scrollbar when not needed */
+        html.fixed-footer body:not(.enable-scroll) main {
+            overflow: hidden;
+            scrollbar-width: none;
+        }
+
+        html.fixed-footer body:not(.enable-scroll) main::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Prevent body scroll when content fits viewport */
+        html.fixed-footer body:not(.enable-scroll) {
+            overflow: hidden;
+        }
     }
 </style>
