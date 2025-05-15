@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout isFooterFixed={true}>
@@ -71,26 +72,7 @@ import Layout from "../layouts/Layout.astro";
                     </h2>
                     <div class="max-w-[98%] mx-auto md:max-w-none">
                         <div class="grid grid-cols-3 gap-2 md:gap-4">
-                            <a
-                                    href="https://github.com/heyimnel/www"
-                                    target="_blank"
-                                    class="text-sm"
-                            >
-                                <div class="group rounded-lg border border-white/14 md:border-white/10 px-2.5 py-2.5 sm:px-3 sm:py-3 md:px-4 md:py-3.5 text-center hover:bg-gray-800/15 transition-colors h-full flex flex-col w-full max-w-[145px] sm:max-w-[165px] md:max-w-[195px] lg:max-w-[235px] mx-auto">
-                                    <div class="w-full text-center">
-                                        <h3
-                                                class="text-gray-200 text-[0.9rem] md:text-lg mb-1.5 md:mb-2.5 whitespace-nowrap inline-block"
-                                        >
-                                            This Website
-                                        </h3>
-                                    </div>
-                                    <p class="text-gray-300 text-[0.55rem] md:text-sm mb-1.5 md:mb-2 leading-tight md:leading-normal flex-grow flex items-center justify-center">
-                                        My personal website<br/>
-                                        built with Astro<br/>
-                                        and Tailwind CSS
-                                    </p>
-                                </div>
-                            </a>
+                            <Card description="My personal website built with Astro and Tailwind CSS" href="https://github.com/heyimnel/www" title="This website"/>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,29 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    href: string;
+}
+const { title , description, href }  = Astro.props;
+---
+
+<a
+        href={href}
+        target="_blank"
+        class="text-sm"
+>
+    <div
+            class="group rounded-lg border border-white/14 md:border-white/10 px-2.5 pt-2.5 pb-1.5 md:px-4 md:pt-3.5 md:pb-2 text-center hover:bg-gray-800/15 transition-colors h-full flex flex-col w-full max-w-[145px] sm:max-w-[165px] md:max-w-[195px] lg:max-w-[235px] mx-auto"
+    >
+        <div class="w-full text-center">
+            <h3
+                    class="text-gray-200 text-[0.9rem] md:text-lg mb-1.5 md:mb-2 whitespace-nowrap inline-block"
+            >
+                {title}
+            </h3>
+        </div>
+        <p class="text-gray-300 text-[0.55rem] md:text-sm mb-1 md:mb-0 leading-tight md:leading-normal flex items-center justify-center">
+            <Fragment set:html={description.replace(/\n/g, '<br />')} />
+        </p>
+    </div>
+</a>
