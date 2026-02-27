@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>heyimnel</title>
+        <meta name="description" content="hey, i'm nel, a dev based in 🇵🇱" />
+        <meta
+            name="keywords"
+            content="heyimnel, Nel, Kornel,
+            developer, web development,
+            coding, web dev, dev, full-stack, fullstack, full stack"
+        />
+        <script is:inline>
+            function initTheme() {
+                const theme = localStorage.getItem("theme");
+                if (theme === "light") {
+                    document.documentElement.classList.add("light");
+                } else {
+                    document.documentElement.classList.remove("light");
+                }
+            }
+
+            initTheme();
+
+            document.addEventListener("astro:before-swap", (ev) => {
+                const theme = localStorage.getItem("theme");
+                if (theme === "light") {
+                    ev.newDocument.documentElement.classList.add("light");
+                }
+            });
+        </script>
+    </head>
+    <body draggable="false">
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>

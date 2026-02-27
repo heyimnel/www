@@ -1,0 +1,17 @@
+{
+	"name": "www",
+	"type": "module",
+	"version": "0.0.2",
+	"license": "MIT",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/vercel": "^9.0.4",
+		"@vercel/functions": "^3.3.4",
+		"astro": "^5.18.0"
+	}
+}
