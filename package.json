@@ -10,8 +10,8 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/vercel": "^9.0.4",
-		"@vercel/functions": "^3.3.4",
-		"astro": "^5.18.0"
+		"@astrojs/vercel": "latest",
+		"@vercel/functions": "^3.10.3",
+		"astro": "latest"
 	}
 }
